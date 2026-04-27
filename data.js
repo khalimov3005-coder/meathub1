@@ -21,7 +21,7 @@ export const catalog = [
     title: "Рыба",
     desc: "Красная и белая рыба, морепродукты, креветки",
     badge: "Свежемороженая",
-    img: "https://images.unsplash.com/photo-1535399831218-d4c1071b40b6?w=800&q=80"
+    img: "https://images.unsplash.com/photo-1649730242324-9912d50e7a33?w=800&auto=format&fit=crop&q=80"
   },
   {
     title: "Молочная продукция",
