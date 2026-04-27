@@ -1,0 +1,111 @@
+* { -webkit-font-smoothing: antialiased; }
+
+html { scroll-behavior: smooth; }
+
+body { font-feature-settings: "ss01", "cv11"; }
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+}
+
+.catalog-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #0F1E36;
+  aspect-ratio: 4/5;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.catalog-card:hover {
+  transform: translateY(-4px);
+}
+
+.catalog-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.catalog-card:hover img {
+  transform: scale(1.06);
+}
+
+.catalog-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10,22,40,0.1) 0%, rgba(10,22,40,0.4) 50%, rgba(10,22,40,0.95) 100%);
+}
+
+.catalog-card .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.75rem;
+  color: white;
+}
+
+.catalog-card .badge {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  background: rgba(214, 40, 40, 0.95);
+  color: white;
+  padding: 0.35rem 0.75rem;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.catalog-card h3 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.catalog-card p {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.5;
+}
+
+.catalog-card .arrow {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.catalog-card:hover .arrow {
+  background: #D62828;
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .catalog-card { aspect-ratio: 3/4; }
+}
+
+input:focus, textarea:focus { box-shadow: 0 0 0 3px rgba(214, 40, 40, 0.1); }
+
+::selection { background: #D62828; color: white; }

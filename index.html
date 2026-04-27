@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ООО «ТЭЙН» — Оптовые поставки мяса и продуктов питания по России</title>
+<meta name="description" content="Оптовые поставки мяса, рыбы, молочной продукции в Сибирь, Якутию, Дальний Восток, СПб. Сборные грузы. Прямые контракты с производителями.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        'tein-dark': '#0A1628',
+        'tein-navy': '#0F1E36',
+        'tein-steel': '#3A4A5F',
+        'tein-red': '#D62828',
+        'tein-red-dark': '#A81F1F',
+        'tein-cream': '#F8F6F2',
+        'tein-gray': '#8B95A3',
+      },
+      fontFamily: {
+        'sans': ['Inter', 'sans-serif'],
+        'display': ['Manrope', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+</head>
+<body class="font-sans bg-tein-cream text-tein-dark antialiased">
+
+<header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-tein-dark/90 border-b border-white/5">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 bg-tein-red flex items-center justify-center rounded">
+        <span class="text-white font-display font-extrabold text-xl">Т</span>
+      </div>
+      <div>
+        <div class="text-white font-display font-bold text-lg leading-tight">ТЭЙН</div>
+        <div class="text-tein-gray text-xs leading-tight">Оптовые поставки</div>
+      </div>
+    </div>
+    <nav class="hidden lg:flex items-center gap-8 text-sm text-white/80">
+      <a href="#advantages" class="hover:text-white transition">Преимущества</a>
+      <a href="#catalog" class="hover:text-white transition">Каталог</a>
+      <a href="#clients" class="hover:text-white transition">Для кого</a>
+      <a href="#process" class="hover:text-white transition">Как работаем</a>
+      <a href="#cases" class="hover:text-white transition">Кейсы</a>
+      <a href="#contacts" class="hover:text-white transition">Контакты</a>
+    </nav>
+    <a href="#cta" class="bg-tein-red hover:bg-tein-red-dark text-white px-5 py-2.5 rounded font-medium text-sm transition flex items-center gap-2">
+      <i data-lucide="phone" class="w-4 h-4"></i>
+      <span class="hidden sm:inline">Получить прайс</span>
+    </a>
+  </div>
+</header>
+
+<section class="hero relative min-h-screen flex items-center pt-24 overflow-hidden">
+  <div class="absolute inset-0 z-0">
+    <img src="assets/5a8f1201676c37d6_b2b_meat_wholesale_hero_image_index_1.jpeg" alt="Оптовые поставки мяса" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-r from-tein-dark via-tein-dark/85 to-tein-dark/40"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-tein-dark/90 via-transparent to-transparent"></div>
+  </div>
+  
+  <div class="relative z-10 max-w-7xl mx-auto px-6 py-20 w-full">
+    <div class="max-w-3xl">
+      <div class="inline-flex items-center gap-2 bg-tein-red/15 border border-tein-red/30 backdrop-blur-sm text-tein-red px-4 py-2 rounded-full text-sm font-medium mb-8 fade-up">
+        <span class="w-2 h-2 bg-tein-red rounded-full animate-pulse"></span>
+        Шашлычный сезон 2026 — отгрузки без задержек
+      </div>
+      
+      <h1 class="font-display font-extrabold text-white text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight mb-6 fade-up">
+        Оптовые поставки <span class="text-tein-red">мяса</span> и продуктов питания для&nbsp;вашего бизнеса
+      </h1>
+      
+      <p class="text-white/80 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl fade-up">
+        Надежное снабжение Сибири, Якутии, Дальнего Востока и Санкт-Петербурга. Сборные грузы, прямые контракты с производителями и бесперебойные отгрузки в высокий сезон.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 mb-10 fade-up">
+        <a href="#cta" class="group bg-tein-red hover:bg-tein-red-dark text-white px-8 py-4 rounded font-semibold text-base transition-all flex items-center justify-center gap-3 shadow-lg shadow-tein-red/30">
+          <i data-lucide="file-text" class="w-5 h-5"></i>
+          Получить прайс
+          <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition"></i>
+        </a>
+        <a href="https://wa.me/79000000000" target="_blank" class="group bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/15 text-white px-8 py-4 rounded font-semibold text-base transition-all flex items-center justify-center gap-3">
+          <i data-lucide="message-circle" class="w-5 h-5 text-green-400"></i>
+          Написать в WhatsApp
+        </a>
+      </div>
+      
+      <div class="flex items-center gap-2 text-white/70 text-sm fade-up">
+        <i data-lucide="zap" class="w-4 h-4 text-tein-red"></i>
+        <span>Ответим на запрос за <span class="text-white font-semibold">10 минут</span></span>
+      </div>
+    </div>
+    
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-20 fade-up">
+      <div class="border-l-2 border-tein-red pl-4">
+        <div class="font-display font-bold text-3xl md:text-4xl text-white">2020</div>
+        <div class="text-white/60 text-sm mt-1">на рынке с</div>
+      </div>
+      <div class="border-l-2 border-tein-red pl-4">
+        <div class="font-display font-bold text-3xl md:text-4xl text-white">20<span class="text-tein-red">+</span> т</div>
+        <div class="text-white/60 text-sm mt-1">отгрузка одним рейсом</div>
+      </div>
+      <div class="border-l-2 border-tein-red pl-4">
+        <div class="font-display font-bold text-3xl md:text-4xl text-white">100%</div>
+        <div class="text-white/60 text-sm mt-1">«Меркурий» сопровождение</div>
+      </div>
+      <div class="border-l-2 border-tein-red pl-4">
+        <div class="font-display font-bold text-3xl md:text-4xl text-white">4</div>
+        <div class="text-white/60 text-sm mt-1">макрорегиона России</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/40 z-10 hidden md:block">
+    <i data-lucide="chevron-down" class="w-6 h-6 animate-bounce"></i>
+  </div>
+</section>
+
+<section id="advantages" class="py-24 md:py-32 bg-tein-cream">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="max-w-3xl mb-16 reveal">
+      <div class="text-tein-red font-semibold text-sm uppercase tracking-widest mb-4">Преимущества</div>
+      <h2 class="font-display font-extrabold text-4xl md:text-5xl lg:text-6xl text-tein-dark leading-tight tracking-tight">
+        Почему с нами выгодно работать
+      </h2>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-tein-dark/10">
+      <div class="bg-tein-cream p-8 lg:p-10 reveal">
+        <div class="w-14 h-14 bg-tein-red/10 flex items-center justify-center rounded mb-6">
+          <i data-lucide="package" class="w-7 h-7 text-tein-red"></i>
+        </div>
+        <h3 class="font-display font-bold text-xl mb-3 text-tein-dark">Сборные заказы</h3>
+        <p class="text-tein-steel leading-relaxed">Отгружаем все категории продуктов в одной машине — от мяса до молочной продукции и бакалеи.</p>
+      </div>
+      
+      <div class="bg-tein-cream p-8 lg:p-10 reveal">
+        <div class="w-14 h-14 bg-tein-red/10 flex items-center justify-center rounded mb-6">
+          <i data-lucide="truck" class="w-7 h-7 text-tein-red"></i>
+        </div>
+        <h3 class="font-display font-bold text-xl mb-3 text-tein-dark">Сложная логистика</h3>
+        <p class="text-tein-steel leading-relaxed">Доставляем грузы в любую точку РФ, включая удаленные регионы Якутии и Дальнего Востока.</p>
+      </div>
+      
+      <div class="bg-tein-cream p-8 lg:p-10 reveal">
+        <div class="w-14 h-14 bg-tein-red/10 flex items-center justify-center rounded mb-6">
+          <i data-lucide="handshake" class="w-7 h-7 text-tein-red"></i>
+        </div>
+        <h3 class="font-display font-bold text-xl mb-3 text-tein-dark">Прямые контракты</h3>
+        <p class="text-tein-steel leading-relaxed">Работаем напрямую с Мираторг, Черкизово, Ресурс и другими крупными производителями.</p>
+      </div>
+      
+      <div class="bg-tein-cream p-8 lg:p-10 reveal">
+        <div class="w-14 h-14 bg-tein-red/10 flex items-center justify-center rounded mb-6">
+          <i data-lucide="shield-check" class="w-7 h-7 text-tein-red"></i>
+        </div>
+        <h3 class="font-display font-bold text-xl mb-3 text-tein-dark">Контроль качества</h3>
+        <p class="text-tein-steel leading-relaxed">Только сертифицированные бойни и заводы-изготовители. Соблюдение температурного режима.</p>
+      </div>
+      
+      <div class="bg-tein-cream p-8 lg:p-10 reveal">
+        <div class="w-14 h-14 bg-tein-red/10 flex items-center justify-center rounded mb-6">
+          <i data-lucide="trending-up" class="w-7 h-7 text-tein-red"></i>
+        </div>
+        <h3 class="font-display font-bold text-xl mb-3 text-tein-dark">Гибкие условия</h3>
+        <p class="text-tein-steel leading-relaxed">Индивидуальные объемы, отсрочка платежа для постоянных клиентов, дисконт от объема.</p>
+      </div>
+      
+      <div class="bg-tein-cream p-8 lg:p-10 reveal">
+        <div class="w-14 h-14 bg-tein-red/10 flex items-center justify-center rounded mb-6">
+          <i data-lucide="clock" class="w-7 h-7 text-tein-red"></i>
+        </div>
+        <h3 class="font-display font-bold text-xl mb-3 text-tein-dark">Ответ за 10 минут</h3>
+        <p class="text-tein-steel leading-relaxed">Менеджер пришлет актуальный прайс и расчет логистики в течение 10 минут после запроса.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="catalog" class="py-24 md:py-32 bg-tein-dark text-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-16 gap-6 reveal">
+      <div class="max-w-2xl">
+        <div class="text-tein-red font-semibold text-sm uppercase tracking-widest mb-4">Каталог продукции</div>
+        <h2 class="font-display font-extrabold text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight">
+          Закрываем 100% потребностей<br>профессиональной кухни
+        </h2>
+      </div>
+      <a href="#cta" class="text-tein-red hover:text-white transition flex items-center gap-2 font-medium">
+        Запросить полный прайс
+        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </a>
+    </div>
+    
+    <div id="catalog-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    
+    <div class="mt-12 p-6 md:p-8 border border-white/10 rounded bg-white/5 reveal flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6">
+      <div class="w-12 h-12 bg-tein-red/20 flex items-center justify-center rounded shrink-0">
+        <i data-lucide="search" class="w-6 h-6 text-tein-red"></i>
+      </div>
+      <div class="flex-1">
+        <div class="font-display font-bold text-lg mb-1">Не нашли нужную позицию?</div>
+        <div class="text-white/70">Поставка под запрос. Найдем любой ассортимент через нашу сеть поставщиков.</div>
+      </div>
+      <a href="#cta" class="bg-tein-red hover:bg-tein-red-dark px-6 py-3 rounded font-medium transition whitespace-nowrap">Запросить позицию</a>
+    </div>
+  </div>
+</section>
+
+<section id="clients" class="py-24 md:py-32 bg-tein-cream">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="max-w-3xl mb-16 reveal">
+      <div class="text-tein-red font-semibold text-sm uppercase tracking-widest mb-4">Для кого</div>
+      <h2 class="font-display font-extrabold text-4xl md:text-5xl lg:text-6xl text-tein-dark leading-tight tracking-tight">
+        Помогаем расти бизнесу разного масштаба
+      </h2>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="group bg-white p-8 rounded transition hover:shadow-xl reveal border border-transparent hover:border-tein-red/20">
+        <i data-lucide="utensils-crossed" class="w-10 h-10 text-tein-red mb-6"></i>
+        <h3 class="font-display font-bold text-xl text-tein-dark mb-3">Рестораны и HoReCa</h3>
+        <p class="text-tein-steel text-sm leading-relaxed">Стабильное качество отрубов для меню. Премиальные позиции и мраморная говядина.</p>
+      </div>
+      
+      <div class="group bg-white p-8 rounded transition hover:shadow-xl reveal border border-transparent hover:border-tein-red/20">
+        <i data-lucide="store" class="w-10 h-10 text-tein-red mb-6"></i>
+        <h3 class="font-display font-bold text-xl text-tein-dark mb-3">Магазины и сети</h3>
+        <p class="text-tein-steel text-sm leading-relaxed">Фасованная и весовая продукция с полным пакетом ветеринарных документов.</p>
+      </div>
+      
+      <div class="group bg-white p-8 rounded transition hover:shadow-xl reveal border border-transparent hover:border-tein-red/20">
+        <i data-lucide="warehouse" class="w-10 h-10 text-tein-red mb-6"></i>
+        <h3 class="font-display font-bold text-xl text-tein-dark mb-3">Оптовые компании</h3>
+        <p class="text-tein-steel text-sm leading-relaxed">Крупный опт с глубоким дисконтом и приоритетной отгрузкой со склада.</p>
+      </div>
+      
+      <div class="group bg-white p-8 rounded transition hover:shadow-xl reveal border border-transparent hover:border-tein-red/20">
+        <i data-lucide="factory" class="w-10 h-10 text-tein-red mb-6"></i>
+        <h3 class="font-display font-bold text-xl text-tein-dark mb-3">Производства</h3>
+        <p class="text-tein-steel text-sm leading-relaxed">Сырье для колбасных цехов и цехов полуфабрикатов. Объемы от 5 тонн.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process" class="py-24 md:py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="max-w-3xl mb-16 reveal">
+      <div class="text-tein-red font-semibold text-sm uppercase tracking-widest mb-4">Как мы работаем</div>
+      <h2 class="font-display font-extrabold text-4xl md:text-5xl lg:text-6xl text-tein-dark leading-tight tracking-tight">
+        От заявки до поставки<br>за 5 простых шагов
+      </h2>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+      <div class="reveal">
+        <div class="text-7xl font-display font-extrabold text-tein-red/15 leading-none mb-4">01</div>
+        <h3 class="font-display font-bold text-lg text-tein-dark mb-2">Заявка</h3>
+        <p class="text-tein-steel text-sm leading-relaxed">Оставляете запрос в WhatsApp, Telegram или по телефону.</p>
+      </div>
+      <div class="reveal">
+        <div class="text-7xl font-display font-extrabold text-tein-red/15 leading-none mb-4">02</div>
+        <h3 class="font-display font-bold text-lg text-tein-dark mb-2">Расчет за 10 минут</h3>
+        <p class="text-tein-steel text-sm leading-relaxed">Получаете актуальный прайс-лист и расчет логистики.</p>
+      </div>
+      <div class="reveal">
+        <div class="text-7xl font-display font-extrabold text-tein-red/15 leading-none mb-4">03</div>
+        <h3 class="font-display font-bold text-lg text-tein-dark mb-2">Договор</h3>
+        <p class="text-tein-steel text-sm leading-relaxed">Согласуем объемы, фиксируем цену, подписываем документы.</p>
+      </div>
+      <div class="reveal">
+        <div class="text-7xl font-display font-extrabold text-tein-red/15 leading-none mb-4">04</div>
+        <h3 class="font-display font-bold text-lg text-tein-dark mb-2">Сборка заказа</h3>
+        <p class="text-tein-steel text-sm leading-relaxed">Безналичный расчет. Комплектуем сборный груз на складе.</p>
+      </div>
+      <div class="reveal">
+        <div class="text-7xl font-display font-extrabold text-tein-red/15 leading-none mb-4">05</div>
+        <h3 class="font-display font-bold text-lg text-tein-dark mb-2">Поставка</h3>
+        <p class="text-tein-steel text-sm leading-relaxed">Отгрузка за 24 часа. Все ветсертификаты «Меркурий».</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cases" class="py-24 md:py-32 bg-tein-navy text-white relative overflow-hidden">
+  <div class="absolute inset-0 opacity-5">
+    <div class="absolute top-20 left-10 w-96 h-96 bg-tein-red rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-tein-red rounded-full blur-3xl"></div>
+  </div>
+  
+  <div class="max-w-7xl mx-auto px-6 relative">
+    <div class="max-w-3xl mb-16 reveal">
+      <div class="text-tein-red font-semibold text-sm uppercase tracking-widest mb-4">Реальные кейсы</div>
+      <h2 class="font-display font-extrabold text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight">
+        Объемы, которые говорят<br>сами за себя
+      </h2>
+    </div>
+    
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-gradient-to-br from-white/5 to-white/0 border border-white/10 p-8 md:p-10 rounded reveal">
+        <div class="flex items-start justify-between mb-6">
+          <i data-lucide="map-pin" class="w-8 h-8 text-tein-red"></i>
+          <span class="text-xs text-white/50 uppercase tracking-wider">Якутск</span>
+        </div>
+        <div class="font-display font-extrabold text-5xl md:text-6xl mb-3">20<span class="text-tein-red">т</span></div>
+        <h3 class="font-display font-bold text-xl mb-2">Свинина в Якутск</h3>
+        <p class="text-white/60 text-sm leading-relaxed">Организация сложной логистики в период межсезонья с сохранением температурного режима.</p>
+      </div>
+      
+      <div class="bg-gradient-to-br from-white/5 to-white/0 border border-white/10 p-8 md:p-10 rounded reveal">
+        <div class="flex items-start justify-between mb-6">
+          <i data-lucide="flame" class="w-8 h-8 text-tein-red"></i>
+          <span class="text-xs text-white/50 uppercase tracking-wider">Красноярск</span>
+        </div>
+        <div class="font-display font-extrabold text-5xl md:text-6xl mb-3">8<span class="text-tein-red">т</span><span class="text-2xl text-white/50">/неделя</span></div>
+        <h3 class="font-display font-bold text-xl mb-2">Шейка для гриль-баров</h3>
+        <p class="text-white/60 text-sm leading-relaxed">Еженедельные поставки шейки и маринованного мяса в пик шашлычного сезона.</p>
+      </div>
+      
+      <div class="bg-gradient-to-br from-white/5 to-white/0 border border-white/10 p-8 md:p-10 rounded reveal">
+        <div class="flex items-start justify-between mb-6">
+          <i data-lucide="anchor" class="w-8 h-8 text-tein-red"></i>
+          <span class="text-xs text-white/50 uppercase tracking-wider">Санкт-Петербург</span>
+        </div>
+        <div class="font-display font-extrabold text-5xl md:text-6xl mb-3">SPB<span class="text-tein-red">.</span></div>
+        <h3 class="font-display font-bold text-xl mb-2">Выход на Северо-Запад</h3>
+        <p class="text-white/60 text-sm leading-relaxed">Формирование складских остатков для бесперебойного обеспечения HoReCa региона.</p>
+      </div>
+      
+      <div class="bg-gradient-to-br from-white/5 to-white/0 border border-white/10 p-8 md:p-10 rounded reveal">
+        <div class="flex items-start justify-between mb-6">
+          <i data-lucide="container" class="w-8 h-8 text-tein-red"></i>
+          <span class="text-xs text-white/50 uppercase tracking-wider">Северный завоз</span>
+        </div>
+        <div class="font-display font-extrabold text-5xl md:text-6xl mb-3">5–15<span class="text-tein-red">т</span></div>
+        <h3 class="font-display font-bold text-xl mb-2">Сборные контейнеры</h3>
+        <p class="text-white/60 text-sm leading-relaxed">Комплектация: мясо + молочная продукция + бакалея для удаленных регионов.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="trust" class="py-24 md:py-32 bg-tein-cream">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-16 items-start">
+      <div class="reveal">
+        <div class="text-tein-red font-semibold text-sm uppercase tracking-widest mb-4">Доверие и безопасность</div>
+        <h2 class="font-display font-extrabold text-4xl md:text-5xl text-tein-dark leading-tight tracking-tight mb-6">
+          Юридически чистая компания с прозрачной отчетностью
+        </h2>
+        <p class="text-tein-steel text-lg leading-relaxed mb-10">
+          ООО «ТЭЙН» работает строго по договору, соблюдая все нормы законодательства РФ. Каждая партия сопровождается полным пакетом ветеринарных документов.
+        </p>
+        
+        <div class="space-y-3">
+          <div class="flex items-center gap-4 p-4 bg-white rounded">
+            <div class="text-tein-gray text-sm w-32">Компания</div>
+            <div class="font-semibold text-tein-dark">ООО «ТЭЙН»</div>
+          </div>
+          <div class="flex items-center gap-4 p-4 bg-white rounded">
+            <div class="text-tein-gray text-sm w-32">ИНН</div>
+            <div class="font-semibold text-tein-dark">2404021049</div>
+          </div>
+          <div class="flex items-center gap-4 p-4 bg-white rounded">
+            <div class="text-tein-gray text-sm w-32">ОГРН</div>
+            <div class="font-semibold text-tein-dark">1202400010950</div>
+          </div>
+          <div class="flex items-center gap-4 p-4 bg-white rounded">
+            <div class="text-tein-gray text-sm w-32">Документация</div>
+            <div class="font-semibold text-tein-dark flex items-center gap-2">
+              <i data-lucide="badge-check" class="w-5 h-5 text-tein-red"></i>
+              Система «Меркурий»
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="reveal">
+        <div class="text-tein-gray text-sm uppercase tracking-widest mb-6 font-semibold">Работаем с лидерами отрасли</div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-white p-8 rounded flex items-center justify-center h-28 border border-tein-dark/5">
+            <span class="font-display font-extrabold text-2xl text-tein-dark">МИРАТОРГ</span>
+          </div>
+          <div class="bg-white p-8 rounded flex items-center justify-center h-28 border border-tein-dark/5">
+            <span class="font-display font-extrabold text-2xl text-tein-dark">Черкизово</span>
+          </div>
+          <div class="bg-white p-8 rounded flex items-center justify-center h-28 border border-tein-dark/5">
+            <span class="font-display font-extrabold text-2xl text-tein-dark">РЕСУРС</span>
+          </div>
+          <div class="bg-white p-8 rounded flex items-center justify-center h-28 border border-tein-dark/5">
+            <span class="font-display font-extrabold text-2xl text-tein-dark">Останкино</span>
+          </div>
+          <div class="bg-white p-8 rounded flex items-center justify-center h-28 border border-tein-dark/5">
+            <span class="font-display font-extrabold text-xl text-tein-dark">Велком</span>
+          </div>
+          <div class="bg-white p-8 rounded flex items-center justify-center h-28 border border-tein-dark/5">
+            <span class="font-display font-extrabold text-xl text-tein-dark">Дамате</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cta" class="py-24 md:py-32 bg-tein-dark text-white relative overflow-hidden">
+  <div class="absolute inset-0 opacity-10">
+    <img src="assets/5a8f1201676c37d6_b2b_meat_wholesale_hero_image_index_1.jpeg" alt="" class="w-full h-full object-cover">
+  </div>
+  <div class="absolute inset-0 bg-gradient-to-r from-tein-dark via-tein-dark/95 to-tein-dark/85"></div>
+  
+  <div class="max-w-5xl mx-auto px-6 relative">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <div class="text-tein-red font-semibold text-sm uppercase tracking-widest mb-4">Сделайте заказ</div>
+        <h2 class="font-display font-extrabold text-4xl md:text-5xl leading-tight tracking-tight mb-6">
+          Получите индивидуальное предложение
+        </h2>
+        <p class="text-white/70 text-lg leading-relaxed mb-8">
+          Не ждите дефицита в разгар сезона. Менеджер свяжется с вами в течение 10 минут и пришлет актуальный прайс с учетом ваших объемов.
+        </p>
+        
+        <div class="space-y-3 mb-8">
+          <div class="flex items-center gap-3 text-white/80">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-tein-red"></i>
+            <span>Подберем оптимальный ассортимент</span>
+          </div>
+          <div class="flex items-center gap-3 text-white/80">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-tein-red"></i>
+            <span>Рассчитаем стоимость доставки</span>
+          </div>
+          <div class="flex items-center gap-3 text-white/80">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-tein-red"></i>
+            <span>Зафиксируем цены на сезон</span>
+          </div>
+        </div>
+        
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="https://wa.me/79000000000" target="_blank" class="flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 px-6 py-3 rounded font-medium transition">
+            <i data-lucide="message-circle" class="w-5 h-5"></i>
+            WhatsApp
+          </a>
+          <a href="https://t.me/tein_supply" target="_blank" class="flex items-center justify-center gap-3 bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded font-medium transition">
+            <i data-lucide="send" class="w-5 h-5"></i>
+            Telegram
+          </a>
+        </div>
+      </div>
+      
+      <div class="bg-white p-8 md:p-10 rounded shadow-2xl reveal">
+        <h3 class="font-display font-bold text-2xl text-tein-dark mb-2">Заявка на прайс</h3>
+        <p class="text-tein-steel text-sm mb-6">Ответим за 10 минут в рабочее время</p>
+        
+        <form id="leadForm" class="space-y-4">
+          <div>
+            <input type="text" name="name" required placeholder="Ваше имя" class="w-full px-4 py-3 bg-tein-cream border border-transparent focus:border-tein-red rounded outline-none text-tein-dark transition">
+          </div>
+          <div>
+            <input type="tel" name="phone" required placeholder="Телефон" class="w-full px-4 py-3 bg-tein-cream border border-transparent focus:border-tein-red rounded outline-none text-tein-dark transition">
+          </div>
+          <div>
+            <input type="text" name="company" placeholder="Компания (опционально)" class="w-full px-4 py-3 bg-tein-cream border border-transparent focus:border-tein-red rounded outline-none text-tein-dark transition">
+          </div>
+          <div>
+            <textarea name="message" rows="3" placeholder="Что интересует? Объемы, регион..." class="w-full px-4 py-3 bg-tein-cream border border-transparent focus:border-tein-red rounded outline-none text-tein-dark transition resize-none"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-tein-red hover:bg-tein-red-dark text-white py-4 rounded font-semibold transition flex items-center justify-center gap-2">
+            <span id="submitText">Получить прайс</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+          <p class="text-xs text-tein-gray text-center">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contacts" class="bg-tein-navy text-white border-t border-white/5">
+  <div class="max-w-7xl mx-auto px-6 py-16">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-10 h-10 bg-tein-red flex items-center justify-center rounded">
+            <span class="text-white font-display font-extrabold text-xl">Т</span>
+          </div>
+          <div>
+            <div class="font-display font-bold text-lg">ТЭЙН</div>
+            <div class="text-white/50 text-xs">Оптовые поставки</div>
+          </div>
+        </div>
+        <p class="text-white/60 text-sm leading-relaxed">Надежный партнер в поставках мяса и продуктов питания по России с 2020 года.</p>
+      </div>
+      
+      <div>
+        <h4 class="font-display font-bold mb-5 text-sm uppercase tracking-wider">Контакты</h4>
+        <ul class="space-y-3 text-sm text-white/70">
+          <li class="flex items-start gap-2">
+            <i data-lucide="phone" class="w-4 h-4 mt-0.5 text-tein-red"></i>
+            <a href="tel:+79000000000" class="hover:text-white transition">+7 (900) 000-00-00</a>
+          </li>
+          <li class="flex items-start gap-2">
+            <i data-lucide="mail" class="w-4 h-4 mt-0.5 text-tein-red"></i>
+            <a href="mailto:info@tein-opt.ru" class="hover:text-white transition">info@tein-opt.ru</a>
+          </li>
+          <li class="flex items-start gap-2">
+            <i data-lucide="clock" class="w-4 h-4 mt-0.5 text-tein-red"></i>
+            <span>Пн-Пт 09:00–18:00 (МСК+4)</span>
+          </li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="font-display font-bold mb-5 text-sm uppercase tracking-wider">Мессенджеры</h4>
+        <ul class="space-y-3 text-sm">
+          <li>
+            <a href="https://wa.me/79000000000" target="_blank" class="flex items-center gap-2 text-white/70 hover:text-white transition">
+              <i data-lucide="message-circle" class="w-4 h-4 text-green-400"></i>
+              WhatsApp
+            </a>
+          </li>
+          <li>
+            <a href="https://t.me/tein_supply" target="_blank" class="flex items-center gap-2 text-white/70 hover:text-white transition">
+              <i data-lucide="send" class="w-4 h-4 text-blue-400"></i>
+              Telegram
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="font-display font-bold mb-5 text-sm uppercase tracking-wider">Адрес склада</h4>
+        <p class="text-white/70 text-sm leading-relaxed mb-3">662520, Красноярский край, пгт Березовка, ул. Трактовая, д. 4</p>
+        <div class="text-white/60 text-xs">Регионы поставок:<br>Сибирь · Якутия · ДВ · СПб</div>
+      </div>
+    </div>
+    
+    <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-xs text-white/50">
+      <div>© 2026 ООО «ТЭЙН». Все права защищены.</div>
+      <div>ИНН 2404021049 · ОГРН 1202400010950</div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/79000000000" target="_blank" class="fixed bottom-6 right-6 z-40 w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-2xl transition hover:scale-110">
+  <i data-lucide="message-circle" class="w-6 h-6 text-white"></i>
+  <span class="absolute -top-1 -right-1 w-4 h-4 bg-tein-red rounded-full animate-ping"></span>
+  <span class="absolute -top-1 -right-1 w-4 h-4 bg-tein-red rounded-full"></span>
+</a>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>
